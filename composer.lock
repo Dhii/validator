@@ -2541,12 +2541,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "9bcb29cce831a8f9b2c8aee0bba1a57445f9dbf1"
+                "reference": "4af4d8462b66f33b24d7a9c4a362184e3ee0aa3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/9bcb29cce831a8f9b2c8aee0bba1a57445f9dbf1",
-                "reference": "9bcb29cce831a8f9b2c8aee0bba1a57445f9dbf1",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/4af4d8462b66f33b24d7a9c4a362184e3ee0aa3a",
+                "reference": "4af4d8462b66f33b24d7a9c4a362184e3ee0aa3a",
                 "shasum": ""
             },
             "require": {
@@ -2590,7 +2590,7 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2020-12-15T02:38:00+00:00"
+            "time": "2021-01-13T05:52:33+00:00"
         },
         {
             "name": "symfony/console",
