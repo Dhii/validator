@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace Dhii\Validator;
 
-use Dhii\Validation\Exception\ValidationExceptionInterface;
 use Dhii\Validation\Exception\ValidationFailedExceptionInterface;
 use Dhii\Validation\ValidatorInterface;
 use Dhii\Validator\Exception\ValidationException;
 use Dhii\Validator\Exception\ValidationFailedException;
 use Exception;
+use RuntimeException;
 
 class CallbackValidator implements ValidatorInterface
 {
@@ -54,17 +54,22 @@ class CallbackValidator implements ValidatorInterface
     }
 
     /**
-     * Returns the dump of a variable as a string.
+     * Retrieves the dump of a variable as a string.
      *
      * @see var_dump()
      * @param mixed $value The value to get the dump of.
      * @return string The dump.
+     * @throws RuntimeException If problem retrieving.
      */
     protected function varDump($value): string
     {
         ob_start();
         var_dump($value);
         $dump = ob_get_clean();
+
+        if ($dump === false) {
+            throw new RuntimeException('Output buffering not started');
+        }
 
         return $dump;
     }
