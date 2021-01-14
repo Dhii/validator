@@ -55,6 +55,6 @@ class CompositeValidator implements ValidatorInterface
      */
     protected function __(string $string, array $params = []): string
     {
-        return sprintf($string, $params);
+        return vsprintf($string, $params);
     }
 }
