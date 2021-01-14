@@ -48,7 +48,7 @@ class CallbackValidator implements ValidatorInterface
         }
 
         $message = $result === false
-            ? sprintf('Value is invalid')
+            ? sprintf('Value is invalid: %1$s', $this->varDump($value))
             : (string) $result;
         throw new ValidationFailedException($this, $value, [$message], $message);
     }
