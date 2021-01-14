@@ -9,7 +9,9 @@
     <config name="installed_paths" value="../../slevomat/coding-standard"/>
 
     <rule ref="PSR12"/>
-    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint"/>
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint">
+        <type>warning</type>
+    </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint"/>
     <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
         <type>warning</type>
