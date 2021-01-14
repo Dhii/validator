@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Dhii\Validator;
@@ -43,7 +44,12 @@ class CompositeValidator implements ValidatorInterface
 
         $errCount = count($errors);
         if ($errCount) {
-            throw new ValidationFailedException($this, $value, $errors, $this->__('Validation failed with %1$d errors', [$errCount]));
+            throw new ValidationFailedException(
+                $this,
+                $value,
+                $errors,
+                $this->__('Validation failed with %1$d errors', [$errCount])
+            );
         }
     }
 
@@ -51,7 +57,7 @@ class CompositeValidator implements ValidatorInterface
      * Translates a string, interpolating params.
      *
      * @param string $string The string to translate. Can be a {@see sprintf()} style format.
-     * @param array $params The param values to interpolate into the string.
+     * @param list<string>   $params The param values to interpolate into the string.
      * @return string The translated string with params interpolated.
      */
     protected function __(string $string, array $params = []): string
