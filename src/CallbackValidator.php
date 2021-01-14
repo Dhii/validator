@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Dhii\Validator;
 
-use Dhii\Validation\Exception\ValidationExceptionInterface;
 use Dhii\Validation\Exception\ValidationFailedExceptionInterface;
 use Dhii\Validation\ValidatorInterface;
 use Dhii\Validator\Exception\ValidationFailedException;
@@ -71,6 +70,8 @@ class CallbackValidator implements ValidatorInterface
         if ($dump === false) {
             throw new RuntimeException('Output buffering not started');
         }
+
+        $dump = trim($dump);
 
         return $dump;
     }
