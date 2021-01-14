@@ -14,7 +14,6 @@ use Dhii\Validator\Exception\ValidationFailedException;
 class CompositeValidator implements ValidatorInterface
 {
     /**
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint
      * @var iterable|ValidatorInterface[]
      */
     protected $validators;
@@ -29,7 +28,6 @@ class CompositeValidator implements ValidatorInterface
 
     /**
      * @inheritDoc
-     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
      */
     public function validate($value): void
     {
