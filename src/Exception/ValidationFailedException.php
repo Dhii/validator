@@ -15,11 +15,20 @@ use Throwable;
  */
 class ValidationFailedException extends RuntimeException implements ValidationFailedExceptionInterface
 {
-    /** @var ValidatorInterface */
+    /**
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint
+     * @var ValidatorInterface
+     */
     protected $validator;
-    /** @var mixed */
+    /**
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint
+     * @var mixed
+     */
     protected $subject;
-    /** @var list<string|Stringable> */
+    /**
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint
+     * @var list<string|Stringable>
+     */
     protected $errors;
 
     /**

@@ -15,6 +15,7 @@ class CallbackValidator implements ValidatorInterface
     use VarDumpTrait;
 
     /**
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingNativeTypeHint
      * @var callable
      */
     protected $callback;
@@ -31,6 +32,7 @@ class CallbackValidator implements ValidatorInterface
 
     /**
      * @inheritDoc
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
      */
     public function validate($value): void
     {
