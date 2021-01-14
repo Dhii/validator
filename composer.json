@@ -26,7 +26,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Dhii\\Validator\\Test\\Func\\": "tests/functional"
+      "Dhii\\Validator\\Test\\Func\\": "tests/functional",
+      "Dhii\\Validator\\Test\\Unit\\": "tests/unit"
     }
   },
   "extra": {

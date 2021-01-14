@@ -11,6 +11,8 @@ use RuntimeException;
 
 class CallbackValidator implements ValidatorInterface
 {
+    use VarDumpTrait;
+
     /**
      * @var callable
      */
@@ -50,29 +52,5 @@ class CallbackValidator implements ValidatorInterface
             ? sprintf('Value is invalid: %1$s', $this->varDump($value))
             : (string) $result;
         throw new ValidationFailedException($this, $value, [$message], $message);
-    }
-
-    /**
-     * Retrieves the dump of a variable as a string.
-     *
-     * @see var_dump()
-     * @param mixed $value The value to get the dump of.
-     * @return string The dump.
-     * @throws RuntimeException If problem retrieving.
-     */
-    protected function varDump($value): string
-    {
-        ob_start();
-        /** @psalm-suppress ForbiddenCode */
-        var_dump($value);
-        $dump = ob_get_clean();
-
-        if ($dump === false) {
-            throw new RuntimeException('Output buffering not started');
-        }
-
-        $dump = trim($dump);
-
-        return $dump;
     }
 }
