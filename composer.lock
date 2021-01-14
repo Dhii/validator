@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1bfa2fc6190171204d30d2717bf2dc1",
-    "packages": [],
+    "content-hash": "74670f5ad3f49a9d2914d19a2926c836",
+    "packages": [
+        {
+            "name": "dhii/validation-interface",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dhii/validation-interface.git",
+                "reference": "0e73c7bf3d2421ceb79331c60a9bc1b1d5eb65a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dhii/validation-interface/zipball/0e73c7bf3d2421ceb79331c60a9bc1b1d5eb65a6",
+                "reference": "0e73c7bf3d2421ceb79331c60a9bc1b1d5eb65a6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 | ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0 | ^8.0 | ^9.0",
+                "slevomat/coding-standard": "^6.0",
+                "symfony/polyfill-mbstring": "1.20",
+                "symfony/polyfill-php80": "^1.19",
+                "vimeo/psalm": "^3.11.7 | ^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dhii\\Validation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Ukhanev",
+                    "email": "xedin.unknown@gmail.com"
+                }
+            ],
+            "description": "A base interface for validators",
+            "support": {
+                "issues": "https://github.com/Dhii/validation-interface/issues",
+                "source": "https://github.com/Dhii/validation-interface/tree/v0.3.0-alpha3"
+            },
+            "time": "2021-01-14T16:19:20+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "amphp/amp",
@@ -13,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/amp.git",
-                "reference": "973878a03840043019bc535c840a480223ee761f"
+                "reference": "7d4bbc6e0b47c6bb39b6cce1a4b5942e0c5125fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/amp/zipball/973878a03840043019bc535c840a480223ee761f",
-                "reference": "973878a03840043019bc535c840a480223ee761f",
+                "url": "https://api.github.com/repos/amphp/amp/zipball/7d4bbc6e0b47c6bb39b6cce1a4b5942e0c5125fb",
+                "reference": "7d4bbc6e0b47c6bb39b6cce1a4b5942e0c5125fb",
                 "shasum": ""
             },
             "require": {
@@ -95,7 +149,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-11T22:57:20+00:00"
+            "time": "2021-01-13T19:16:50+00:00"
         },
         {
             "name": "amphp/byte-stream",
@@ -2428,12 +2482,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "e07e2d15211ca4e7c972b276f5bf7ce2c07cfca0"
+                "reference": "059efe34aac90043a289f1a4f713ae80490a35f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/e07e2d15211ca4e7c972b276f5bf7ce2c07cfca0",
-                "reference": "e07e2d15211ca4e7c972b276f5bf7ce2c07cfca0",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/059efe34aac90043a289f1a4f713ae80490a35f7",
+                "reference": "059efe34aac90043a289f1a4f713ae80490a35f7",
                 "shasum": ""
             },
             "require": {
@@ -2445,10 +2499,10 @@
             "require-dev": {
                 "phing/phing": "2.16.3",
                 "php-parallel-lint/php-parallel-lint": "1.2.0",
-                "phpstan/phpstan": "0.12.64",
+                "phpstan/phpstan": "0.12.66",
                 "phpstan/phpstan-deprecation-rules": "0.12.6",
                 "phpstan/phpstan-phpunit": "0.12.17",
-                "phpstan/phpstan-strict-rules": "0.12.7",
+                "phpstan/phpstan-strict-rules": "0.12.9",
                 "phpunit/phpunit": "7.5.20|8.5.5|9.5.0"
             },
             "default-branch": true,
@@ -2482,7 +2536,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-11T10:34:02+00:00"
+            "time": "2021-01-13T14:16:06+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -2490,12 +2544,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "9bcb29cce831a8f9b2c8aee0bba1a57445f9dbf1"
+                "reference": "59d4c8d3990274f341f1d8cfc691c5d22751c69a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/9bcb29cce831a8f9b2c8aee0bba1a57445f9dbf1",
-                "reference": "9bcb29cce831a8f9b2c8aee0bba1a57445f9dbf1",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/59d4c8d3990274f341f1d8cfc691c5d22751c69a",
+                "reference": "59d4c8d3990274f341f1d8cfc691c5d22751c69a",
                 "shasum": ""
             },
             "require": {
@@ -2539,7 +2593,7 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2020-12-15T02:38:00+00:00"
+            "time": "2021-01-14T04:41:46+00:00"
         },
         {
             "name": "symfony/console",
@@ -2547,12 +2601,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "096c4d37e79f70bbac78424468b19878f96e987f"
+                "reference": "adb658b43abb668be457c1adb0e472c842dea6af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/096c4d37e79f70bbac78424468b19878f96e987f",
-                "reference": "096c4d37e79f70bbac78424468b19878f96e987f",
+                "url": "https://api.github.com/repos/symfony/console/zipball/adb658b43abb668be457c1adb0e472c842dea6af",
+                "reference": "adb658b43abb668be457c1adb0e472c842dea6af",
                 "shasum": ""
             },
             "require": {
@@ -2628,7 +2682,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-11T08:57:50+00:00"
+            "time": "2021-01-14T15:08:15+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -3080,16 +3134,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "3.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "19aa905f7c3c7350569999a93c40ae91ae4e1626"
+                "reference": "ef4afd72bca50a0aff61599d3e433c9ee64287ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/19aa905f7c3c7350569999a93c40ae91ae4e1626",
-                "reference": "19aa905f7c3c7350569999a93c40ae91ae4e1626",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/ef4afd72bca50a0aff61599d3e433c9ee64287ac",
+                "reference": "ef4afd72bca50a0aff61599d3e433c9ee64287ac",
                 "shasum": ""
             },
             "require": {
@@ -3108,12 +3162,11 @@
                 "felixfbecker/advanced-json-rpc": "^3.0.3",
                 "felixfbecker/language-server-protocol": "^1.4",
                 "netresearch/jsonmapper": "^1.0 || ^2.0 || ^3.0",
-                "nikic/php-parser": "4.3.* || 4.4.* || 4.5.* || 4.6.* || ^4.8",
+                "nikic/php-parser": "^4.10.1",
                 "openlss/lib-array2xml": "^1.0",
-                "php": "^7.1.3|^8",
+                "php": "^7.1|^8",
                 "sebastian/diff": "^3.0 || ^4.0",
                 "symfony/console": "^3.4.17 || ^4.1.6 || ^5.0",
-                "webmozart/glob": "^4.1",
                 "webmozart/path-util": "^2.3"
             },
             "provide": {
@@ -3122,14 +3175,14 @@
             "require-dev": {
                 "amphp/amp": "^2.4.2",
                 "bamarni/composer-bin-plugin": "^1.2",
-                "brianium/paratest": "^4.0.0",
+                "brianium/paratest": "^4.0||^6.0",
                 "ext-curl": "*",
-                "phpdocumentor/reflection-docblock": "^4.3.4 || ^5",
-                "phpmyadmin/sql-parser": "5.1.0",
+                "phpdocumentor/reflection-docblock": "^5",
+                "phpmyadmin/sql-parser": "5.1.0||dev-master",
                 "phpspec/prophecy": ">=1.9.0",
-                "phpunit/phpunit": "^7.5.16 || ^8.5 || ^9.0",
-                "psalm/plugin-phpunit": "^0.11",
-                "slevomat/coding-standard": "^5.0",
+                "phpunit/phpunit": "^9.0",
+                "psalm/plugin-phpunit": "^0.13",
+                "slevomat/coding-standard": "^6.3.11",
                 "squizlabs/php_codesniffer": "^3.5",
                 "symfony/process": "^4.3",
                 "weirdan/prophecy-shim": "^1.0 || ^2.0"
@@ -3137,6 +3190,7 @@
             "suggest": {
                 "ext-igbinary": "^2.0.5"
             },
+            "default-branch": true,
             "bin": [
                 "psalm",
                 "psalm-language-server",
@@ -3147,7 +3201,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.x-dev",
+                    "dev-master": "4.x-dev",
+                    "dev-3.x": "3.x-dev",
                     "dev-2.x": "2.x-dev",
                     "dev-1.x": "1.x-dev"
                 }
@@ -3178,9 +3233,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vimeo/psalm/issues",
-                "source": "https://github.com/vimeo/psalm/tree/3.x"
+                "source": "https://github.com/vimeo/psalm/tree/4.4.0"
             },
-            "time": "2020-10-20T13:48:22+00:00"
+            "time": "2021-01-13T23:10:59+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -3234,58 +3289,6 @@
                 "source": "https://github.com/webmozart/assert/tree/master"
             },
             "time": "2020-07-08T17:02:28+00:00"
-        },
-        {
-            "name": "webmozart/glob",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webmozart/glob.git",
-                "reference": "8da14867b709e8776d9f6272faaf844aefc695e3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/glob/zipball/8da14867b709e8776d9f6272faaf844aefc695e3",
-                "reference": "8da14867b709e8776d9f6272faaf844aefc695e3",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.3|^7.0",
-                "webmozart/path-util": "^2.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.6",
-                "sebastian/version": "^1.0.1",
-                "symfony/filesystem": "^2.5"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Webmozart\\Glob\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "A PHP implementation of Ant's glob.",
-            "support": {
-                "issues": "https://github.com/webmozart/glob/issues",
-                "source": "https://github.com/webmozart/glob/tree/master"
-            },
-            "time": "2016-08-15T15:31:26+00:00"
         },
         {
             "name": "webmozart/path-util",
@@ -3345,7 +3348,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1"
+        "php": "^7.1 | ^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
