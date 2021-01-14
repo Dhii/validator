@@ -66,7 +66,7 @@ class CompositeValidatorTest extends TestCase
             [
                 0,
                 10,
-                ['Value is invalid', 'Value is not greater than 10']
+                ['Value is invalid: int(0)', 'Value is not greater than 10']
             ],
             [
                 11,
