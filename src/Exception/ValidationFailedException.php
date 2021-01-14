@@ -17,6 +17,7 @@ class ValidationFailedException
 {
     /** @var ValidatorInterface */
     protected $validator;
+    /** @var mixed */
     protected $subject;
     /** @var iterable */
     protected $errors;

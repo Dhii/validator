@@ -28,10 +28,11 @@ class CompositeValidator implements ValidatorInterface
     /**
      * @inheritDoc
      */
-    public function validate($value)
+    public function validate($value): void
     {
         $errors = [];
         foreach ($this->validators as $validator) {
+            /** @psalm-suppress RedundantConditionGivenDocblockType */
             assert($validator instanceof ValidatorInterface);
             try {
                 $validator->validate($value);

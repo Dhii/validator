@@ -2,10 +2,10 @@
 
 namespace Dhii\Validator\Test\Func;
 
+use Dhii\Validation\Exception\ValidationFailedExceptionInterface;
 use Dhii\Validation\ValidatorInterface;
 use Dhii\Validator\CallbackValidator;
 use Dhii\Validator\CompositeValidator as Subject;
-use Dhii\Validator\Exception\ValidationFailedException;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use stdClass;
@@ -116,10 +116,10 @@ class CompositeValidatorTest extends TestCase
 
             try {
                 $subject->validate($value);
-            } catch (ValidationFailedException $e) {
-                $this->assertEquals(sprintf('Validation failed with %1$d errors', [count($exceptionMessages)]), $e->getMessage());
+            } catch (ValidationFailedExceptionInterface $e) {
                 $errors = [];
                 array_push($errors, ...$e->getValidationErrors()); // Normalize iterable to array
+                $this->assertEquals(sprintf('Validation failed with %1$d errors', count($exceptionMessages)), $e->getMessage());
                 for ($i = 0; $i < count($exceptionMessages); $i++) {
                     $this->assertArrayHasKey($i, $errors, sprintf('Expected error message not present: %1$s', $exceptionMessages[$i]));
                     $this->assertEquals($exceptionMessages[$i], $errors[$i]->getMessage());

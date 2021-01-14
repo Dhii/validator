@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Dhii\Validator;
 
+use Dhii\Validation\Exception\ValidationExceptionInterface;
 use Dhii\Validation\Exception\ValidationFailedExceptionInterface;
 use Dhii\Validation\ValidatorInterface;
-use Dhii\Validator\Exception\ValidationException;
 use Dhii\Validator\Exception\ValidationFailedException;
 use Exception;
 use RuntimeException;
@@ -30,7 +30,7 @@ class CallbackValidator implements ValidatorInterface
     /**
      * @inheritDoc
      */
-    public function validate($value)
+    public function validate($value): void
     {
         try {
             $callback = $this->callback;
@@ -40,7 +40,7 @@ class CallbackValidator implements ValidatorInterface
                 throw $e;
             }
 
-            throw new ValidationException($this, sprintf('Failed validating %1$s', $this->varDump($value)), 0, $e);
+            throw new RuntimeException(sprintf('Failed validating %1$s', $this->varDump($value)), 0, $e);
         }
 
         if ($result === null) {
@@ -64,6 +64,7 @@ class CallbackValidator implements ValidatorInterface
     protected function varDump($value): string
     {
         ob_start();
+        /** @psalm-suppress ForbiddenCode */
         var_dump($value);
         $dump = ob_get_clean();
 
