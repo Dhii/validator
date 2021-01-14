@@ -8,8 +8,6 @@
         useDocblockTypes="true"
         usePhpDocMethodsWithoutMagicCall="false"
         strictBinaryOperands="true"
-        requireVoidReturnType="true"
-        useAssertForType="false"
         rememberPropertyAssignmentsAfterCall="true"
         allowPhpStormGenerics="true"
         allowCoercionFromStringToClassConst="false"
@@ -27,9 +25,6 @@
 >
     <projectFiles>
         <directory name="src"/>
-        <ignoreFiles>
-            <directory name="vendor"/>
-        </ignoreFiles>
     </projectFiles>
 
     <extraFiles>
@@ -37,7 +32,6 @@
             <directory name="vendor/phpunit/php-code-coverage/tests"/>
             <directory name="vendor/phpspec/prophecy"/>
         </ignoreFiles>
-        <directory name="vendor" />
     </extraFiles>
 
 
@@ -91,7 +85,6 @@
         <InvalidScalarArgument errorLevel="error"/>
         <InvalidScope errorLevel="error"/>
         <InvalidStaticInvocation errorLevel="error"/>
-        <MisplacedRequiredParam errorLevel="error"/>
         <MissingConstructor errorLevel="error"/>
         <MissingDependency errorLevel="error"/>
         <MissingFile errorLevel="error"/>
@@ -156,5 +149,6 @@
         <MixedReturnStatement errorLevel="info"/>
         <MixedReturnTypeCoercion errorLevel="info"/>
         <MixedStringOffsetAssignment errorLevel="info"/>
+        <RedundantConditionGivenDocblockType errorLevel="info"/>
     </issueHandlers>
 </psalm>
