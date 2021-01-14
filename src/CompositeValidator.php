@@ -44,6 +44,7 @@ class CompositeValidator implements ValidatorInterface
 
         $errCount = count($errors);
         if ($errCount) {
+            /** @psalm-suppress ImplicitToStringCast Until PHP 8 is minimal requirement */
             throw new ValidationFailedException(
                 $this,
                 $value,
@@ -57,7 +58,7 @@ class CompositeValidator implements ValidatorInterface
      * Translates a string, interpolating params.
      *
      * @param string $string The string to translate. Can be a {@see sprintf()} style format.
-     * @param list<string>   $params The param values to interpolate into the string.
+     * @param list<scalar> $params The param values to interpolate into the string.
      * @return string The translated string with params interpolated.
      */
     protected function __(string $string, array $params = []): string
