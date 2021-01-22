@@ -38,7 +38,7 @@ $usernameValidator = new CompositeValidator([$alphanum, $chars30]);
 // Valid username: nothing happens
 $usernameValidator->validate('abcdef');
 
-// Invalid percentage value: exception thrown
+// Invalid username value: exception thrown
 try {
     $percentValidator->validate('abcdefghijklmnopqrstuvwxyz!@#$%');
 } catch (ValidationFailedExceptionInterface $e) {
